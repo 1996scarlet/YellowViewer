@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
 import android.widget.MediaController
-import android.widget.VideoView
+import kotlinx.android.synthetic.main.activity_video.*
 
 class VideoActivity : AppCompatActivity() {
 
@@ -22,12 +22,12 @@ class VideoActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_video)
 
-        val videoView = this.findViewById(R.id.video) as VideoView
-        videoView.setMediaController(MediaController(this))
-        val uri = Uri.parse("http://120.52.72.23/data1.cache.directory/media/videos/iphone/${intent.getStringExtra("Number")}.mp4")
-        videoView.setVideoURI(uri)
-        videoView.requestFocus()
-        videoView.start()
+        //val videoView = this.findViewById(R.id.video) as VideoView
+        video.setMediaController(MediaController(this))
+        val uri = Uri.parse("http://data1.cache.directory/media/videos/iphone/${intent.getStringExtra("Number")}.mp4")
+        video.setVideoURI(uri)
+        video.requestFocus()
+        video.start()
     }
 
     override fun onResume() {
