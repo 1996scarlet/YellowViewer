@@ -12,21 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val time = Time()
-//        time.setToNow()
- //       val editor = EditText(this)
-//        AlertDialog.Builder(this).setTitle("今天的密码：（加群678478321）")
-//                .setView(editor).setCancelable(false)
-//                .setPositiveButton("确定", { _, _ ->
-//                    if (editor.text.toString() == ((time.monthDay * 48 + 2) * 1996 - 2017).toString()) {
-//
-//                    } else {
-//                        super.onBackPressed()
-//                    }
-//                }).show()
-
-//        val editText = findViewById(R.id.editNumber) as EditText
-
         sendNumber.setOnClickListener {
             val intent = Intent(this@MainActivity, VideoActivity::class.java)
             intent.putExtra("Number", editNumber.text.toString())
